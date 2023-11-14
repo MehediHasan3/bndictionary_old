@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(188 188 188);
+    background-size: cover;
+  }
+
+  h1 {
+    margin: 0 0 10px;
+    padding: 0;
+    color: rgb(255, 255, 255); /* Set color to orange */
+    font-family: 'Noto Serif Bengali', serif;
+    font-weight: bold;
+    font-size: 35px; /* Use a single font-size declaration */
+    text-align: center;
+  }
+  
+  .box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    transform: translate(-50%, -50%);
+  }
+
+  input {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    box-sizing: border-box;
+    transition: .5s;
+  }
+
+  input[type="text"] {
+    background: #fff;
+    width: 340px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 0 25px;
+    border-radius: 25px 0 0 25px;
+    font-family: 'Noto Serif Bengali', serif;
+  }
+
+  input[type="submit"] {
+    position: relative;
+    left: -5px;
+    border-radius: 0 25px 25px 0;
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #ffc107;
+    color: #fff;
+    font-family: 'Noto Serif Bengali', serif;
+  }
+
+  input[type="submit"]:hover {
+    background: #f34b21; /* Change the hover color to a more contrasting color */
+  }
+
+  #searchResults {
+    margin-top: 20px;
+    color: #fff;
+}
+
+.main {
+  background-color: #FFFFFF;
+  width: 400px;
+  height: 300px;
+  margin: 3em auto;
+  border-radius: 1.5em;
+  box-shadow: 5px 5px 330px 1px #ffffff80;
+}
+
+.sign {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertical centering */
+  align-items: center; /* Horizontal centering */
+  height: 100%; /* Occupy full height of the container */
+  padding-top: 40px;
+  padding-bottom: 40px; /* Adjust the bottom padding as needed */
+  padding-right: 35px;
+  padding-left: 35px;
+  color: #000000;
+  font-family: 'Noto Serif Bengali', serif;
+  font-weight: bold;
+  font-size: 23px;
+  text-align: center;
+}

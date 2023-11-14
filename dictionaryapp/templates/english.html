@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!--<link rel="styelsheet" href="../static/styles.css">--> 
+  <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@100;200;300;400;500;600;700;800;900&family=Tiro+Bangla&display=swap" rel="stylesheet">
+  <title> Personal Dictionary </title>
+</head>
+<body>
+  <div class="box">
+    <h1 id="header">বাংলা শব্দ ডিকশনারি</h1>
+    <script src="../static/popup.js"></script>
+    
+    <form id="searchForm" action="" method="get">
+      <input type="text" name="query" placeholder="শব্দ লিখুন">
+      <input type="submit" value="Search" onclick="showPopup()">
+    </form>
+    <!-- index.html -->
+    <div id="searchResults">
+        {% if query %}
+            <div id="popup"></div>
+            {% if result %}
+                <div class="main">
+                  <p class="sign">শব্দ: {{ result.word }} <br> অর্থ: {{ result.meaning }}</p>
+                </div>
+            {% else %}
+                <script>
+                    // Show the "No result found" message in the popup div
+                    document.getElementById('popup').innerHTML = '<div class="main"><p class="sign" text-align="center">দুঃখিত, আমার ডাটাবেজে "{{ query }}" শব্দের অর্থ নেই।</p></div>';
+                    document.getElementById('popup').style.display = 'block';
+                </script>
+            {% endif %}
+        {% endif %}
+    </div>
+  </div>
+</body>
+</html>
